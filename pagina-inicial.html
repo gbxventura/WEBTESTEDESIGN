@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="files/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d7d6d6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: -webkit-linear-gradient(top, #2a0018, #000000);
+            background: linear-gradient(to bottom, #2a0018, #000000);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Menu Responsivo */
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #220014;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin-right: 15px;
+        }
+
+        .menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            color: #7300ae;
+        }
+
+        /* Galeria */
+        .galeria {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .galeria img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Efeito de movimento na galeria */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-100%);
+            }
+
+            40% {
+                transform: translateX(-200%);
+            }
+
+            60% {
+                transform: translateX(-300%);
+            }
+
+            80% {
+                transform: translateX(-400%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .galeria-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .galeria-slide {
+            display: flex;
+            animation: slide 10s infinite;
+        }
+
+        /* Efeito de movimento ao passar o mouse no slide da galeria */
+        .galeria-slide:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+            </ul>
+        </div>
+        <div class="galeria-container">
+            
+            <div class="galeria">
+                <div class="galeria-slide">
+                    <img src="imagem1.jpg" width="100px" height="100px" alt="Imagem 1">
+                    <img src="imagem2.jpg" alt="Imagem 2">
+                    <img src="imagem3.jpg" alt="Imagem 3">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
